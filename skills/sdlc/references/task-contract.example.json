@@ -1,0 +1,22 @@
+[
+  {
+    "id": "u1-auth-endpoint",
+    "goal": "Add POST /login that returns a JWT for valid credentials.",
+    "inputs": ["api/routes.py", "api/auth.py"],
+    "output_schema": { "type": "object", "required": ["files_changed", "tests_added"] },
+    "acceptance": ["valid creds return 200 + token", "bad creds return 401", "unit tests green"],
+    "deps": [],
+    "isolation": "worktree",
+    "verify": { "strategy": "adversarial", "votes": 2 }
+  },
+  {
+    "id": "u2-login-form",
+    "goal": "Add the login form UI wired to POST /login.",
+    "inputs": ["web/src/Login.tsx"],
+    "output_schema": { "type": "object", "required": ["files_changed", "tests_added"] },
+    "acceptance": ["form submits creds", "shows error on 401", "e2e smoke green"],
+    "deps": ["u1-auth-endpoint"],
+    "isolation": "worktree",
+    "verify": { "strategy": "adversarial", "votes": 1 }
+  }
+]

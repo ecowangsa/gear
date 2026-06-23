@@ -1,0 +1,19 @@
+{
+  "name": "gear",
+  "displayName": "Gear",
+  "description": "A ten-skill SDLC toolkit for Claude Code. /gear:sdlc orchestrates six role skills (pm, sa, dev, qa, sec, tw) through the SDLC phases (Discovery, Design, Build, QA, Security, Docs) with hard human gates; each role skill also runs standalone for single-phase use. /gear:council convenes a panel of functional lenses that debate a hard call and return one synthesized verdict. /gear:retro reflects on a session and files reusable lessons (gated). /gear:triage turns a verdict or review into a prioritized remediation backlog that sdlc executes. One model voicing many roles - honest by design, not a team of independent experts. gear:sdlc fans work out across agents via a schema-bound task contract, with git-worktree isolation and adversarial verification. For UI slices, gear:pm offers a mockup + preview URL and gear:dev builds with frontend-design. Experimental.",
+  "version": "0.13.0",
+  "author": {
+    "name": "ecowangsa",
+    "url": "https://github.com/ecowangsa"
+  },
+  "homepage": "https://github.com/ecowangsa/gear",
+  "repository": "https://github.com/ecowangsa/gear",
+  "license": "MIT",
+  "keywords": [
+    "sdlc", "phased-development", "tdd", "code-review", "security-review",
+    "threat-model", "qa", "decision-support", "expert-panel", "second-opinion",
+    "claude-code", "memory", "continuous-learning", "multi-agent",
+    "role-skills", "pm", "sa", "dev", "sec", "tw"
+  ]
+}

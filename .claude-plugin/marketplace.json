@@ -1,0 +1,12 @@
+{
+  "name": "gear",
+  "description": "Gear - a literal SDLC toolkit of Claude Code skills by ecowangsa. One plugin: gear:sdlc (phased-SDLC orchestrator), gear:council (advisory panel), gear:retro (reflection/memory). Install with: /plugin marketplace add ecowangsa/gear then /plugin install gear@gear.",
+  "owner": { "name": "ecowangsa" },
+  "plugins": [
+    {
+      "name": "gear",
+      "source": "./",
+      "description": "gear:sdlc: idea -> release across six SDLC phases (Discovery, Design, Build, QA, Security, Docs/Release) with iterative loop-backs and hard human commit gates. gear:council: functional lenses debate a hard call and return one synthesized verdict with a certainty band. gear:retro: reflect on a session and file reusable lessons, gated. gear:triage: remediation planner that turns a council verdict or review findings into a prioritized backlog (P0..P3) for gear:sdlc to execute. One model, many roles - honest by design. Experimental."
+    }
+  ]
+}

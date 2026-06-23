@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      { "hooks": [ { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/skills/retro/scripts/retro.py\" detect", "timeout": 10 } ] }
+    ],
+    "SessionStart": [
+      { "hooks": [ { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/skills/retro/scripts/retro.py\" nudge", "timeout": 5 } ] }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "gear work unit",
+  "type": "object",
+  "required": ["id", "goal", "inputs", "output_schema", "acceptance", "deps", "isolation", "verify"],
+  "properties": {
+    "id": { "type": "string" },
+    "goal": { "type": "string" },
+    "inputs": { "type": "array", "items": { "type": "string" } },
+    "output_schema": { "type": "object" },
+    "acceptance": { "type": "array", "items": { "type": "string" } },
+    "deps": { "type": "array", "items": { "type": "string" } },
+    "isolation": { "type": "string", "enum": ["none", "worktree"] },
+    "verify": {
+      "type": "object",
+      "required": ["strategy"],
+      "properties": {
+        "strategy": { "type": "string" },
+        "votes": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

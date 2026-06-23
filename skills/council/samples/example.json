@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "status": "done",
+  "title": "A deliberation: the council mends its own rules",
+  "topik": "The council wants to improve how it deliberates - better, but not bloated. What should change?",
+  "beats": [
+    {"phase":1, "role":null, "badge":"Opening", "text":"The council convenes. Five advisors take their seats - the **Simplicity** lens, the **Maintainability** lens, the **Usability** lens, the **Scalability** lens, and the blunt **Contrarian** - each pressing one angle."},
+    {"phase":2, "role":"simplicity", "badge":"Opinion", "tag":"firm", "text":"**Don't add new rules.** Fewer rules, easier to use. A lot of what exists could simply be deleted."},
+    {"phase":2, "role":"maintainability", "badge":"Opinion", "tag":"lean", "text":"The real defect: the rules are **written many times, in many places**, until they contradict each other. Write them once, in one home. Fix that first."},
+    {"phase":2, "role":"usability", "badge":"Opinion", "tag":"firm", "text":"For whoever reads the result: **put the verdict at the very top.** Don't make people read a wall of text before they find the answer."},
+    {"phase":2, "role":"scalability", "badge":"Opinion", "tag":"lean", "text":"Don't always debate at length. When everyone already agrees, **conclude immediately**. Debate only when there is a genuine split - save the time."},
+    {"phase":2, "role":"contrarian", "badge":"Opinion", "tag":"shaky", "text":"Careful: the five of us share the same \"brain.\" We can look like we agree **not because we are right, but because we reason alike.** And a \"78 out of 100\" confidence number is misleading - it looks precise but it is just a guess."},
+    {"phase":3, "role":null, "badge":"Gate", "gong":"Chair sifts", "text":"The Chair weighs the opinions. Nearly all point one way: **\"simplify, don't add.\"** But two things still split us: cut down to how many voices? drop the confidence number or not? So the debate continues on those two."},
+    {"phase":4, "role":"contrarian", "badge":"Debate", "tag":"changed", "changed":true, "text":"I **withdraw** my earlier idea (cut to just two voices) - that is only another tool we already have. The Scalability lens's way is better. But on the confidence number, I **hold**: drop it."},
+    {"phase":4, "role":"maintainability", "badge":"Debate", "tag":"changed", "changed":true, "text":"I **revise**: not merge into one file, but give each thing one clear \"home.\" What I **hold**: tidy up before adding anything."},
+    {"phase":4, "role":"simplicity", "badge":"Debate", "tag":"changed", "changed":true, "text":"I **turn around**: agreed, the confidence number should go - the Contrarian is right, it is a guess dressed up as a number. What I **hold**: reject every new addition."},
+    {"phase":4, "role":"scalability", "badge":"Debate", "tag":"holds", "text":"I **hold**: debate only when there is a split, and the contrarian **must always speak** even when everyone agrees - insurance against being wrong together."},
+    {"phase":4, "role":"usability", "badge":"Debate", "tag":"changed", "changed":true, "text":"I drop the \"ask permission mid-run\" idea. The 0-100 number I replace with three simple bands: **firm / lean / shaky**. What I **hold**: verdict at the top."},
+    {"phase":5, "role":"chair", "badge":"Verdict", "text":"I decide - not by counting the most votes. The irony: the best way to improve this council is to **simplify and sharpen**, not add. Seven changes:", "list":[
+      "Each rule lives in one place - never repeated until it conflicts.",
+      "Define \"skip\" clearly: when to hold no meeting at all, when to skip only the debate.",
+      "Drop the 0-100 number; use three bands: firm / lean / shaky - plus \"what would change this view.\"",
+      "Debate only when there is a split; if everyone agrees, conclude.",
+      "The contrarian always speaks; if it dissents, show its voice in full.",
+      "Put the verdict at the top; keep the functional lens names as the brand.",
+      "Hold back - don't add what isn't needed."
+    ]},
+    {"phase":5, "role":"chair", "badge":"Verdict", "text":"**Certainty: firm.** Remember: \"four of five agree\" is not a vote won - they just happen to think the same way. The council is closed."}
+  ]
+}
