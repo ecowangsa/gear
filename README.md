@@ -29,6 +29,21 @@ All ten skills (`/gear:sdlc`, `/gear:pm`, `/gear:sa`, `/gear:dev`, `/gear:qa`,
 `/gear:sec`, `/gear:tw`, `/gear:council`, `/gear:retro`, `/gear:triage`) are available
 immediately in a new session. The session hooks (see "Live hooks" below) register automatically.
 
+## Update
+
+```text
+/plugin marketplace update gear
+/plugin install gear@gear
+/reload-plugins
+```
+
+`marketplace update` refreshes the catalog from GitHub, `install` replaces the
+installed plugin with the latest release (there is no separate `/plugin update`
+command), and `/reload-plugins` applies the change to the current session - new
+sessions pick it up automatically. Prefer hands-off: open `/plugin`, go to
+**Marketplaces** -> `gear`, and enable **auto-update**; Claude Code then updates
+the plugin at startup.
+
 ---
 
 ## The ten skills, one cycle
