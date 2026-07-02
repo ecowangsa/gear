@@ -293,49 +293,7 @@ but it keeps the transcripts safe to keep.)
 - Hard cap: **5 roles**. No voting, scoring, vote-tallying, convergence loops, or
   transcript persistence - those build false rigor on correlated voices.
 
-## Optional: visual simulation (offer first, never auto-launch)
-
-A browser replay of a deliberation lives in `index.html` in **this skill's own
-directory** (`${CLAUDE_PLUGIN_ROOT}/skills/council/`, alongside `preview.sh`),
-served at the root `/` -
-an autoplay node-graph simulation of one deliberation. It is a companion
-for *showing* a run, not part of the deliberation itself. Treat it exactly like
-brainstorming's visual companion: **ask the user whether they want to see it; do
-not open it on your own.** **Make this offer as its own short message BEFORE you
-dispatch Round 1** - the choice has to be made up front, because watching the
-debate live requires writing the transcript incrementally *as the run happens*.
-If they **decline**, run the whole deliberation in the terminal and do **not**
-start a server or write `sidang.json` at all (no preview overhead). If they
-**accept** and you will feed it a real run, start it with
-**`bash "${CLAUDE_PLUGIN_ROOT}/skills/council/preview.sh" start --live`** - the `--live` flag makes the page poll for
-`sidang.json` (without it the page just shows the bundled sample and never polls,
-which is the right default for a pure showcase). It binds a dynamic free port on
-loopback, kills any prior preview first (so at most one ever runs), and prints the
-URL to share. Do not open the `file://` path directly, and do not hardcode a port.
-**Never auto-stop the server when the deliberation finishes** (`status:done` means the
-deliberation ended, not that the user finished reading - they may still be
-re-reading the verdict); the next `preview.sh start` reaps it, or stop it
-explicitly with `bash "${CLAUDE_PLUGIN_ROOT}/skills/council/preview.sh" stop`. Replace em-dashes / en-dashes with a plain
-hyphen in any text the simulation displays.
-
-**Showing a real run.** To visualize the deliberation you just ran (rather than
-the bundled sample), write the run as `sidang.json` next to `index.html` at the
-skill dir (`${CLAUDE_PLUGIN_ROOT}/skills/council/sidang.json`), then serve
-with `--live` and share the URL. The page polls `sidang.json` (until it appears)
-and plays it back. This is a **one-time side-output written after the Chair
-synthesis** - it is opt-in and must never influence any deliberation decision. The
-exact shape is the single-source-of-truth contract in
-`references/transcript-schema.md` (`{schemaVersion, title, topik, beats[]}`,
-flat, not mirroring the gate logic). Do not add per-round/streaming writes or a
-custom server: the verdict that came out of Round-1 -> gate -> Round-2 ->
-synthesis is mapped to beats (phase 2 = Round 1, 3 = the gate, 4 = Round 2,
-5 = the verdict) and emitted once.
-
-The page auto-plays (no Play button needed) and shows a "thinking" typing
-animation before each member speaks. If the user wants to **watch the deliberation
-unfold live in the browser** while you run it, serve with `--live` and write
-`sidang.json` *incrementally* per the "Live write protocol" in
-`references/transcript-schema.md`: set `status:"running"`, write `pending:true`
-beats for the roles currently being dispatched (so they animate as thinking),
-fill them when the agents return, then flip to `status:"done"`. If they are not
-watching live, the single end-of-run write (`status:"done"`) is enough.
+The council has **no browser preview**: the deliberation runs and reports
+entirely in the terminal. Browser previews belong to the *design mockup* path -
+brainstorming's visual companion (offered by gear:pm for UI slices) and the
+frontend-design skill (used by gear:dev) - never to a council run.

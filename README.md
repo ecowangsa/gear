@@ -12,7 +12,7 @@ qa, sec, tw) that execute each SDLC phase, **council** (the advisor), **retro**
 > say so out loud, on purpose.
 
 > [!WARNING]
-> **Status: experimental (v0.13.0).** These skills have been run across a handful of
+> **Status: experimental (v0.14.0).** These skills have been run across a handful of
 > sessions by their author. **Zero confirmed external users.** Treat them as sharp
 > checklists that are still earning their evidence, not battle-tested discipline.
 

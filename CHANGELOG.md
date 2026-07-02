@@ -3,6 +3,15 @@
 All notable changes to the Gear plugin are documented here. Format loosely
 follows [Keep a Changelog](https://keepachangelog.com/); versions use semver.
 
+## 0.14.0 - 2026-07-02
+
+### Removed
+- Council browser preview. The deliberation replay (`index.html`, `preview.sh`, `sidang.json`,
+  `samples/`, `assets/`, `references/transcript-schema.md`) and the "Optional: visual simulation"
+  section are gone: council now runs and reports entirely in the terminal. Browser previews are
+  the design-mockup path's job - brainstorming's visual companion (offered by gear:pm for
+  UI-touching slices) and the frontend-design skill (used by gear:dev) - not the council's.
+
 ## 0.13.0 - 2026-06-23
 
 ### Added
